@@ -12,6 +12,9 @@ import { getAll } from "../utils/getApi";
 import { addToCart } from "../utils/userCartSlice";
 import { useSelector, useDispatch } from "react-redux";
 
+import badWifiImage from "../assets/bad-wifi.png";
+import goodWifiImage from "../assets/good-wifi.png";
+import lowWifiImage from "../assets/low-wifi.png";
 
 const Navigasi = () => {
 
@@ -38,11 +41,11 @@ const Navigasi = () => {
                                 const rtt = connection.rtt; 
 
                                 if ((tipe === '4g' && kecepatan > 5 && rtt < 100)) {
-                                        setKoneksi('good-wifi')
+                                        setKoneksi(goodWifiImage)
                                 } else if (tipe === '3g' && kecepatan > 1 && rtt < 300) {
-                                        setKoneksi("low-wifi")
+                                        setKoneksi(lowWifiImage)
                                 } else {
-                                        setKoneksi('bad-wifi')
+                                        setKoneksi(badWifiImage)
                                 }
 
 
@@ -231,7 +234,7 @@ const Navigasi = () => {
                                                 </span>
                                         </p>
                                         { 
-                                                koneksi ? (<img src={`/src/assets/${koneksi}.png`} alt="koneksi image" className="w-[30px] h-[30px]"/>) : (
+                                                koneksi ? (<img src={koneksi} alt="koneksi image" className="w-[30px] h-[30px]"/>) : (
                                                         <p className="text-[.7rem]">Browser tidak mendukung fitur wifi</p>
                                                 )
                                         }
