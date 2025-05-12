@@ -194,10 +194,8 @@ const Navigasi = () => {
                                 visible={visibleModal}
                                 header="Cari Produk"
                                 icon="pi pi-search"
-                                breakpoints={{ "360px": "90vw" }}
-                                icons={() => (
-                                        <i className="pi pi-shopping-cart"></i>
-                                )}
+                                breakpoints={{ "360px": "85vw" }}
+                                icons={() => (<i className="pi pi-shopping-cart"></i>)}
                                 onHide={() => setVisibleModal(!visibleModal)}
                         >
                                 <div className="my-3 flex flex-col xs:flex-row items-center gap-2 xs:gap-1 w-full justify-center">
