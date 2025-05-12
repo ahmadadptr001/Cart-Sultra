@@ -213,7 +213,7 @@ const Navigasi = () => {
                                         <Button
                                                 icon="pi pi-shopping-cart"
                                                 onClick={() => handleCart()}
-                                                className="!w-full xs:!w-inherit !py-2.5 !px-0 xs:!px-6 !rounded-sm"
+                                                className="!w-auto xs:!w-inherit !py-2.5 !px-0 xs:!px-6 !rounded-sm"
                                         />
 
                                         <Toast ref={toastCart} position="top-right"/>
