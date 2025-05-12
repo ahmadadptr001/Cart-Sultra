@@ -194,7 +194,7 @@ const Navigasi = () => {
                                 visible={visibleModal}
                                 header="Cari Produk"
                                 icon="pi pi-search"
-                                breakpoints={{ "360px": "95vw" }}
+                                breakpoints={{ "360px": "90vw" }}
                                 icons={() => (
                                         <i className="pi pi-shopping-cart"></i>
                                 )}
