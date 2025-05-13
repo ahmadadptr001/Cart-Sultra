@@ -183,8 +183,12 @@ const Navigasi = () => {
 
         // tambahkan pilihan produk search ke dalam keranjang
         const handleCart = () => {
-                dispatch(addToCart(selectedProduct))
-                toastCart.current.show({ severity: 'success', summary: 'Sukses', detail: 'Berhasil dimasukkan ke keranjang' })
+                if (typeof selectedProduct === 'string') {
+                        dispatch(addToCart(selectedProduct))
+                        toastCart.current.show({ severity: 'success', summary: 'Sukses', detail: 'Berhasil dimasukkan ke keranjang' })
+                } else {
+                        toastCart.current.show({ severity: "danger", summary: "Gagal", detail: "Pilih produk yang sesuai!" })
+                }
         }
 
         return (
@@ -213,7 +217,7 @@ const Navigasi = () => {
                                         <Button
                                                 icon="pi pi-shopping-cart"
                                                 onClick={() => handleCart()}
-                                                className="!w-auto xs:!w-inherit !py-2.5 !px-0 xs:!px-6 !rounded-sm"
+                                                className="!w-full xs:!w-inherit !py-2.5 !px-0 xs:!px-6 !rounded-sm"
                                         />
 
                                         <Toast ref={toastCart} position="top-right"/>
