@@ -202,7 +202,7 @@ const Navigasi = () => {
                                 icons={() => (<i className="pi pi-shopping-cart"></i>)}
                                 onHide={() => setVisibleModal(!visibleModal)}
                         >
-                                <div className="my-3 flex flex-col xs:flex-row items-center gap-2 xs:gap-1 w-full justify-center">
+                                <div className="my-3 flex flex-col xs:flex-row items-center xs:gap-1 w-full justify-center">
                                         
                                         <AutoComplete
                                                 field="title"
@@ -217,7 +217,7 @@ const Navigasi = () => {
                                         <Button
                                                 icon="pi pi-shopping-cart"
                                                 onClick={() => handleCart()}
-                                                className="!w-full xs:!w-inherit !py-2.5 !px-0 xs:!px-6 !rounded-sm"
+                                                className="!w-full xs:!w-inherit !py-2.5 mt-2 xs:mt-0 !px-0 xs:!px-6 !rounded-sm"
                                         />
 
                                         <Toast ref={toastCart} position="top-right"/>
