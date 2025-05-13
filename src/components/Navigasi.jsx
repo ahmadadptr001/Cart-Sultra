@@ -183,7 +183,7 @@ const Navigasi = () => {
 
         // tambahkan pilihan produk search ke dalam keranjang
         const handleCart = () => {
-                if (typeof selectedProduct === 'string') {
+                if (typeof selectedProduct === 'object') {
                         dispatch(addToCart(selectedProduct))
                         toastCart.current.show({ severity: 'success', summary: 'Sukses', detail: 'Berhasil dimasukkan ke keranjang' })
                 } else {
